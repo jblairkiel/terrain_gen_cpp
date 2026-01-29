@@ -1,0 +1,5 @@
+if(EXISTS "/home/jblairkiel/repos/terrain_gen_cpp/build/tests/camera_tests_tests-b12d07c.cmake")
+  include("/home/jblairkiel/repos/terrain_gen_cpp/build/tests/camera_tests_tests-b12d07c.cmake")
+else()
+  add_test(camera_tests_NOT_BUILT-b12d07c camera_tests_NOT_BUILT-b12d07c)
+endif()
