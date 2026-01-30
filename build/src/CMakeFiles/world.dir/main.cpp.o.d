@@ -320,5 +320,5 @@ src/CMakeFiles/world.dir/main.cpp.o: \
  /usr/include/c++/13/bits/basic_ios.tcc \
  /usr/include/c++/13/bits/ostream.tcc /usr/include/c++/13/istream \
  /usr/include/c++/13/bits/istream.tcc \
- /home/jblairkiel/repos/terrain_gen_cpp/src/camera/third_person/third_person.h \
- /home/jblairkiel/repos/terrain_gen_cpp/src/camera/third_person/../camera.h
+ /home/jblairkiel/repos/terrain_gen_cpp/src/camera/thirdpersoncamera.h \
+ /home/jblairkiel/repos/terrain_gen_cpp/src/camera/camera.h

@@ -11,7 +11,11 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.28.3/CMakeCCompiler.cmake"
   "CMakeFiles/3.28.3/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.28.3/CMakeSystem.cmake"
+  "/home/jblairkiel/repos/terrain_gen_cpp/external/glad/CMakeLists.txt"
   "/home/jblairkiel/repos/terrain_gen_cpp/src/CMakeLists.txt"
+  "/home/jblairkiel/repos/terrain_gen_cpp/src/camera/CMakeLists.txt"
+  "/home/jblairkiel/repos/terrain_gen_cpp/src/shaders/CMakeLists.txt"
+  "/home/jblairkiel/repos/terrain_gen_cpp/src/terrain/CMakeLists.txt"
   "/home/jblairkiel/repos/terrain_gen_cpp/tests/CMakeLists.txt"
   "/usr/lib/aarch64-linux-gnu/cmake/glfw3/glfw3Config.cmake"
   "/usr/lib/aarch64-linux-gnu/cmake/glfw3/glfw3ConfigVersion.cmake"
@@ -133,13 +137,20 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/3.28.3/CMakeCCompiler.cmake"
   "CMakeFiles/3.28.3/CMakeCXXCompiler.cmake"
   "CMakeFiles/CMakeDirectoryInformation.cmake"
+  "external/glad/CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "src/camera/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "src/terrain/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "src/shaders/CMakeFiles/CMakeDirectoryInformation.cmake"
   "tests/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "external/glad/CMakeFiles/glad.dir/DependInfo.cmake"
   "src/CMakeFiles/world.dir/DependInfo.cmake"
-  "src/CMakeFiles/glad.dir/DependInfo.cmake"
+  "src/camera/CMakeFiles/camera_module.dir/DependInfo.cmake"
+  "src/terrain/CMakeFiles/terrain_module.dir/DependInfo.cmake"
+  "src/shaders/CMakeFiles/shader_module.dir/DependInfo.cmake"
   "tests/CMakeFiles/camera_tests.dir/DependInfo.cmake"
   )

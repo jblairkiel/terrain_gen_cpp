@@ -140,44 +140,6 @@ world/fast:
 	cd /home/jblairkiel/repos/terrain_gen_cpp/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/world.dir/build.make src/CMakeFiles/world.dir/build
 .PHONY : world/fast
 
-# Convenience name for target.
-src/CMakeFiles/glad.dir/rule:
-	cd /home/jblairkiel/repos/terrain_gen_cpp/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/glad.dir/rule
-.PHONY : src/CMakeFiles/glad.dir/rule
-
-# Convenience name for target.
-glad: src/CMakeFiles/glad.dir/rule
-.PHONY : glad
-
-# fast build rule for target.
-glad/fast:
-	cd /home/jblairkiel/repos/terrain_gen_cpp/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/glad.dir/build.make src/CMakeFiles/glad.dir/build
-.PHONY : glad/fast
-
-__/external/glad/src/glad.o: __/external/glad/src/glad.c.o
-.PHONY : __/external/glad/src/glad.o
-
-# target to build an object file
-__/external/glad/src/glad.c.o:
-	cd /home/jblairkiel/repos/terrain_gen_cpp/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/glad.dir/build.make src/CMakeFiles/glad.dir/__/external/glad/src/glad.c.o
-.PHONY : __/external/glad/src/glad.c.o
-
-__/external/glad/src/glad.i: __/external/glad/src/glad.c.i
-.PHONY : __/external/glad/src/glad.i
-
-# target to preprocess a source file
-__/external/glad/src/glad.c.i:
-	cd /home/jblairkiel/repos/terrain_gen_cpp/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/glad.dir/build.make src/CMakeFiles/glad.dir/__/external/glad/src/glad.c.i
-.PHONY : __/external/glad/src/glad.c.i
-
-__/external/glad/src/glad.s: __/external/glad/src/glad.c.s
-.PHONY : __/external/glad/src/glad.s
-
-# target to generate assembly for a file
-__/external/glad/src/glad.c.s:
-	cd /home/jblairkiel/repos/terrain_gen_cpp/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/glad.dir/build.make src/CMakeFiles/glad.dir/__/external/glad/src/glad.c.s
-.PHONY : __/external/glad/src/glad.c.s
-
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -235,11 +197,7 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... test"
-	@echo "... glad"
 	@echo "... world"
-	@echo "... __/external/glad/src/glad.o"
-	@echo "... __/external/glad/src/glad.i"
-	@echo "... __/external/glad/src/glad.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

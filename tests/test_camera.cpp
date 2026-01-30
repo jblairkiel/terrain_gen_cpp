@@ -1,43 +1,91 @@
 #include <catch2/catch_test_macros.hpp>
 #include <catch2/catch_approx.hpp>
 #include <glm/glm.hpp>
-#include <glm/gtc/constants.hpp>
-#include "../src/camera/third_person/third_person.h"
+#include <glm/gtc/matrix_transform.hpp>
 
-TEST_CASE("Offset when pitch = 0")
+#include "../src/camera/thirdpersoncamera.h"
+
+// A dummy GLFWwindow pointer for construction.
+// We never call GLFW functions in these tests.
+static GLFWwindow *dummyWindow = nullptr;
+
+TEST_CASE("ThirdPersonCamera computes correct offset for yaw=0 pitch=0")
 {
-    glm::vec3 offset = computeCameraOffset(0.0f, 0.0f, 10.0f, 5.0f);
+    ThirdPersonCamera cam(dummyWindow, 10.0f, 5.0f);
+    cam.setTargetPosition(glm::vec3(0.0f));
 
-    REQUIRE(offset.x == Catch::Approx(0.0f));
-    REQUIRE(offset.z == Catch::Approx(10.0f));
-    REQUIRE(offset.y == Catch::Approx(5.0f));
+    cam.yaw = 0.0f;
+    cam.pitch = 0.0f;
+
+    glm::mat4 view = cam.getViewMatrix();
+
+    // Camera should be at (0,5,10) looking at (0,0,0)
+    glm::vec3 expectedPos(0.0f, 5.0f, 10.0f);
+
+    glm::vec3 actualPos = glm::inverse(view)[3];
+
+    REQUIRE(actualPos.x == Catch::Approx(expectedPos.x));
+    REQUIRE(actualPos.y == Catch::Approx(expectedPos.y));
+    REQUIRE(actualPos.z == Catch::Approx(expectedPos.z));
 }
 
-TEST_CASE("Offset when looking upward")
+TEST_CASE("ThirdPersonCamera offset rotates correctly with yaw")
 {
-    glm::vec3 offset = computeCameraOffset(0.0f, 0.5f, 10.0f, 5.0f);
+    ThirdPersonCamera cam(dummyWindow, 10.0f, 5.0f);
+    cam.setTargetPosition(glm::vec3(0.0f));
 
-    REQUIRE(offset.y > 5.0f);
-    REQUIRE(offset.z < 10.0f);
+    cam.yaw = glm::radians(90.0f);
+    cam.pitch = 0.0f;
+
+    glm::mat4 view = cam.getViewMatrix();
+    glm::vec3 camPos = glm::inverse(view)[3];
+
+    // yaw=90° → camera should move to +X direction
+    REQUIRE(camPos.x == Catch::Approx(10.0f));
+    REQUIRE(camPos.z == Catch::Approx(0.0f));
+    REQUIRE(camPos.y == Catch::Approx(5.0f));
 }
 
-TEST_CASE("Offset when looking downward")
+TEST_CASE("ThirdPersonCamera pitch affects height")
 {
-    glm::vec3 offset = computeCameraOffset(0.0f, -0.5f, 10.0f, 5.0f);
+    ThirdPersonCamera cam(dummyWindow, 10.0f, 0.0f);
+    cam.setTargetPosition(glm::vec3(0.0f));
 
-    REQUIRE(offset.y < 5.0f);
-    REQUIRE(offset.z < 10.0f);
+    cam.yaw = 0.0f;
+    cam.pitch = glm::radians(45.0f);
+
+    glm::mat4 view = cam.getViewMatrix();
+    glm::vec3 camPos = glm::inverse(view)[3];
+
+    // sin(45°) * 10 = 7.071
+    REQUIRE(camPos.y == Catch::Approx(7.071f).epsilon(0.01f));
 }
 
-TEST_CASE("Yaw rotates camera around target")
+TEST_CASE("ThirdPersonCamera clamps pitch to safe range")
 {
-    float pitch = 0.0f;
-    float distance = 10.0f;
-    float height = 5.0f;
+    ThirdPersonCamera cam(dummyWindow, 10.0f, 0.0f);
+    cam.setTargetPosition(glm::vec3(0.0f));
 
-    glm::vec3 offset0 = computeCameraOffset(0.0f, pitch, distance, height);
-    glm::vec3 offset90 = computeCameraOffset(glm::half_pi<float>(), pitch, distance, height);
+    cam.pitch = glm::radians(200.0f); // absurd
+    cam.update(0.016f);
 
-    REQUIRE(offset0.z == Catch::Approx(10.0f));
-    REQUIRE(offset90.x == Catch::Approx(10.0f));
+    REQUIRE(cam.pitch <= glm::radians(89.0f));
+    REQUIRE(cam.pitch >= glm::radians(-89.0f));
+}
+
+TEST_CASE("ThirdPersonCamera view matrix looks at target")
+{
+    ThirdPersonCamera cam(dummyWindow, 10.0f, 5.0f);
+
+    glm::vec3 target(50.0f, 0.0f, 50.0f);
+    cam.setTargetPosition(target);
+
+    cam.yaw = glm::radians(180.0f);
+    cam.pitch = 0.0f;
+
+    glm::mat4 view = cam.getViewMatrix();
+    glm::vec3 camPos = glm::inverse(view)[3];
+
+    // Camera should be behind the target on -Z
+    REQUIRE(camPos.z < target.z);
 }

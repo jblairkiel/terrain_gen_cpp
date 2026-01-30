@@ -5,7 +5,7 @@
 #include <vector>
 #include <iostream>
 #include <cmath>
-#include "camera/third_person/third_person.h"
+#include "camera/thirdpersoncamera.h"
 
 // ----------------- Simple noise -----------------
 float fade(float t) { return t * t * t * (t * (t * 6 - 15) + 10); }
@@ -277,7 +277,7 @@ int main()
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
-    GLFWwindow *window = glfwCreateWindow(1280, 720, "Procedural Terrain with Character", nullptr, nullptr);
+    GLFWwindow *window = glfwCreateWindow(1920, 1080, "Procedural Terrain with Character", nullptr, nullptr);
     if (window == NULL)
     {
         std::cout << "Failed to create GLFW window" << std::endl;

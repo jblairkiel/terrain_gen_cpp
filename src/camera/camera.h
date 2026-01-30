@@ -1,17 +1,17 @@
-// Camera.h
 #pragma once
 #include <glm/glm.hpp>
-#include <glm/gtc/matrix_transform.hpp>
 
 class Camera
 {
 public:
     virtual ~Camera() = default;
 
+    // Update camera state (input, smoothing, etc.)
     virtual void update(float dt) = 0;
+
+    // Return the view matrix
     virtual glm::mat4 getViewMatrix() const = 0;
 
-protected:
-    glm::vec3 position{0.0f};
-    glm::vec3 target{0.0f};
+    // Set the position the camera should follow or look at
+    virtual void setTargetPosition(const glm::vec3 &pos) = 0;
 };

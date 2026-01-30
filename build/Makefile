@@ -127,6 +127,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named glad
+
+# Build rule for target.
+glad: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 glad
+.PHONY : glad
+
+# fast build rule for target.
+glad/fast:
+	$(MAKE) $(MAKESILENT) -f external/glad/CMakeFiles/glad.dir/build.make external/glad/CMakeFiles/glad.dir/build
+.PHONY : glad/fast
+
+#=============================================================================
 # Target rules for targets named world
 
 # Build rule for target.
@@ -140,17 +153,43 @@ world/fast:
 .PHONY : world/fast
 
 #=============================================================================
-# Target rules for targets named glad
+# Target rules for targets named camera_module
 
 # Build rule for target.
-glad: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 glad
-.PHONY : glad
+camera_module: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 camera_module
+.PHONY : camera_module
 
 # fast build rule for target.
-glad/fast:
-	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/glad.dir/build.make src/CMakeFiles/glad.dir/build
-.PHONY : glad/fast
+camera_module/fast:
+	$(MAKE) $(MAKESILENT) -f src/camera/CMakeFiles/camera_module.dir/build.make src/camera/CMakeFiles/camera_module.dir/build
+.PHONY : camera_module/fast
+
+#=============================================================================
+# Target rules for targets named terrain_module
+
+# Build rule for target.
+terrain_module: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 terrain_module
+.PHONY : terrain_module
+
+# fast build rule for target.
+terrain_module/fast:
+	$(MAKE) $(MAKESILENT) -f src/terrain/CMakeFiles/terrain_module.dir/build.make src/terrain/CMakeFiles/terrain_module.dir/build
+.PHONY : terrain_module/fast
+
+#=============================================================================
+# Target rules for targets named shader_module
+
+# Build rule for target.
+shader_module: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 shader_module
+.PHONY : shader_module
+
+# fast build rule for target.
+shader_module/fast:
+	$(MAKE) $(MAKESILENT) -f src/shaders/CMakeFiles/shader_module.dir/build.make src/shaders/CMakeFiles/shader_module.dir/build
+.PHONY : shader_module/fast
 
 #=============================================================================
 # Target rules for targets named camera_tests
@@ -174,8 +213,11 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... test"
+	@echo "... camera_module"
 	@echo "... camera_tests"
 	@echo "... glad"
+	@echo "... shader_module"
+	@echo "... terrain_module"
 	@echo "... world"
 .PHONY : help
 

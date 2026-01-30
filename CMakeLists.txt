@@ -7,5 +7,6 @@ set(CMAKE_CXX_STANDARD 17)
 
 # Add subdirectories
 find_package(glfw3 REQUIRED)
+add_subdirectory(external/glad)
 add_subdirectory(src)
 add_subdirectory(tests)

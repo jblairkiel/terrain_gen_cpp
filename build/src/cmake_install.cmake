@@ -42,3 +42,11 @@ if(NOT DEFINED CMAKE_OBJDUMP)
   set(CMAKE_OBJDUMP "/usr/bin/objdump")
 endif()
 
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for each subdirectory.
+  include("/home/jblairkiel/repos/terrain_gen_cpp/build/src/camera/cmake_install.cmake")
+  include("/home/jblairkiel/repos/terrain_gen_cpp/build/src/terrain/cmake_install.cmake")
+  include("/home/jblairkiel/repos/terrain_gen_cpp/build/src/shaders/cmake_install.cmake")
+
+endif()
+
