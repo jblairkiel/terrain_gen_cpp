@@ -152,5 +152,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "src/camera/CMakeFiles/camera_module.dir/DependInfo.cmake"
   "src/terrain/CMakeFiles/terrain_module.dir/DependInfo.cmake"
   "src/shaders/CMakeFiles/shader_module.dir/DependInfo.cmake"
-  "tests/CMakeFiles/camera_tests.dir/DependInfo.cmake"
+  "tests/CMakeFiles/tests.dir/DependInfo.cmake"
   )

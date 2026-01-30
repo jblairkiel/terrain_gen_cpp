@@ -74,6 +74,7 @@ void ThirdPersonCamera::handleMouseInput(float dt)
 void ThirdPersonCamera::update(float dt)
 {
     handleMouseInput(dt);
+    pitch = clampPitch(pitch);
 }
 
 glm::mat4 ThirdPersonCamera::getViewMatrix() const

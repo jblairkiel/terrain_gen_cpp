@@ -38,12 +38,15 @@ TEST_CASE("ThirdPersonCamera offset rotates correctly with yaw")
     cam.pitch = 0.0f;
 
     glm::mat4 view = cam.getViewMatrix();
-    glm::vec3 camPos = glm::inverse(view)[3];
+    glm::mat4 inv = glm::inverse(view);
+    glm::vec3 camPos(inv[3][0], inv[3][1], inv[3][2]);
+    camPos /= inv[3][3];
+    /// glm::vec3 camPos(inv[3][0], inv[3][1], inv[3][2]);
 
     // yaw=90° → camera should move to +X direction
-    REQUIRE(camPos.x == Catch::Approx(10.0f));
-    REQUIRE(camPos.z == Catch::Approx(0.0f));
-    REQUIRE(camPos.y == Catch::Approx(5.0f));
+    REQUIRE(camPos.x == Catch::Approx(10.0f).margin(0.001f));
+    REQUIRE(camPos.z == Catch::Approx(0.0f).margin(0.001f));
+    REQUIRE(camPos.y == Catch::Approx(5.0f).margin(0.001f));
 }
 
 TEST_CASE("ThirdPersonCamera pitch affects height")

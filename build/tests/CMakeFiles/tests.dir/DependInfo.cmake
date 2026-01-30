@@ -8,7 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/jblairkiel/repos/terrain_gen_cpp/tests/test_camera.cpp" "tests/CMakeFiles/camera_tests.dir/test_camera.cpp.o" "gcc" "tests/CMakeFiles/camera_tests.dir/test_camera.cpp.o.d"
+  "/home/jblairkiel/repos/terrain_gen_cpp/tests/test_camera.cpp" "tests/CMakeFiles/tests.dir/test_camera.cpp.o" "gcc" "tests/CMakeFiles/tests.dir/test_camera.cpp.o.d"
+  "/home/jblairkiel/repos/terrain_gen_cpp/tests/test_shader.cpp" "tests/CMakeFiles/tests.dir/test_shader.cpp.o" "gcc" "tests/CMakeFiles/tests.dir/test_shader.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.
