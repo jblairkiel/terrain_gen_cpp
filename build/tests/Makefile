@@ -127,25 +127,25 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-tests/CMakeFiles/camera_tests.dir/rule:
-	cd /home/jblairkiel/repos/terrain_gen_cpp/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/camera_tests.dir/rule
-.PHONY : tests/CMakeFiles/camera_tests.dir/rule
+tests/CMakeFiles/tests.dir/rule:
+	cd /home/jblairkiel/repos/terrain_gen_cpp/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/tests.dir/rule
+.PHONY : tests/CMakeFiles/tests.dir/rule
 
 # Convenience name for target.
-camera_tests: tests/CMakeFiles/camera_tests.dir/rule
-.PHONY : camera_tests
+tests: tests/CMakeFiles/tests.dir/rule
+.PHONY : tests
 
 # fast build rule for target.
-camera_tests/fast:
-	cd /home/jblairkiel/repos/terrain_gen_cpp/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/camera_tests.dir/build.make tests/CMakeFiles/camera_tests.dir/build
-.PHONY : camera_tests/fast
+tests/fast:
+	cd /home/jblairkiel/repos/terrain_gen_cpp/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/tests.dir/build.make tests/CMakeFiles/tests.dir/build
+.PHONY : tests/fast
 
 test_camera.o: test_camera.cpp.o
 .PHONY : test_camera.o
 
 # target to build an object file
 test_camera.cpp.o:
-	cd /home/jblairkiel/repos/terrain_gen_cpp/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/camera_tests.dir/build.make tests/CMakeFiles/camera_tests.dir/test_camera.cpp.o
+	cd /home/jblairkiel/repos/terrain_gen_cpp/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/tests.dir/build.make tests/CMakeFiles/tests.dir/test_camera.cpp.o
 .PHONY : test_camera.cpp.o
 
 test_camera.i: test_camera.cpp.i
@@ -153,7 +153,7 @@ test_camera.i: test_camera.cpp.i
 
 # target to preprocess a source file
 test_camera.cpp.i:
-	cd /home/jblairkiel/repos/terrain_gen_cpp/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/camera_tests.dir/build.make tests/CMakeFiles/camera_tests.dir/test_camera.cpp.i
+	cd /home/jblairkiel/repos/terrain_gen_cpp/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/tests.dir/build.make tests/CMakeFiles/tests.dir/test_camera.cpp.i
 .PHONY : test_camera.cpp.i
 
 test_camera.s: test_camera.cpp.s
@@ -161,8 +161,32 @@ test_camera.s: test_camera.cpp.s
 
 # target to generate assembly for a file
 test_camera.cpp.s:
-	cd /home/jblairkiel/repos/terrain_gen_cpp/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/camera_tests.dir/build.make tests/CMakeFiles/camera_tests.dir/test_camera.cpp.s
+	cd /home/jblairkiel/repos/terrain_gen_cpp/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/tests.dir/build.make tests/CMakeFiles/tests.dir/test_camera.cpp.s
 .PHONY : test_camera.cpp.s
+
+test_shader.o: test_shader.cpp.o
+.PHONY : test_shader.o
+
+# target to build an object file
+test_shader.cpp.o:
+	cd /home/jblairkiel/repos/terrain_gen_cpp/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/tests.dir/build.make tests/CMakeFiles/tests.dir/test_shader.cpp.o
+.PHONY : test_shader.cpp.o
+
+test_shader.i: test_shader.cpp.i
+.PHONY : test_shader.i
+
+# target to preprocess a source file
+test_shader.cpp.i:
+	cd /home/jblairkiel/repos/terrain_gen_cpp/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/tests.dir/build.make tests/CMakeFiles/tests.dir/test_shader.cpp.i
+.PHONY : test_shader.cpp.i
+
+test_shader.s: test_shader.cpp.s
+.PHONY : test_shader.s
+
+# target to generate assembly for a file
+test_shader.cpp.s:
+	cd /home/jblairkiel/repos/terrain_gen_cpp/build && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/tests.dir/build.make tests/CMakeFiles/tests.dir/test_shader.cpp.s
+.PHONY : test_shader.cpp.s
 
 # Help Target
 help:
@@ -173,10 +197,13 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... test"
-	@echo "... camera_tests"
+	@echo "... tests"
 	@echo "... test_camera.o"
 	@echo "... test_camera.i"
 	@echo "... test_camera.s"
+	@echo "... test_shader.o"
+	@echo "... test_shader.i"
+	@echo "... test_shader.s"
 .PHONY : help
 
 

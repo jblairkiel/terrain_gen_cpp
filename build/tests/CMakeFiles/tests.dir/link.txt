@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/tests.dir/test_camera.cpp.o CMakeFiles/tests.dir/test_shader.cpp.o -o tests  /usr/lib/libCatch2Main.a ../external/glad/libglad.a ../src/shaders/libshader_module.a ../src/camera/libcamera_module.a ../src/terrain/libterrain_module.a /usr/lib/aarch64-linux-gnu/libglfw.so.3.3 /usr/lib/libCatch2.a ../external/glad/libglad.a 

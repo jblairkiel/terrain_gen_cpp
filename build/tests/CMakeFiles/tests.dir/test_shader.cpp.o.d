@@ -1,5 +1,5 @@
-tests/CMakeFiles/camera_tests.dir/test_camera.cpp.o: \
- /home/jblairkiel/repos/terrain_gen_cpp/tests/test_camera.cpp \
+tests/CMakeFiles/tests.dir/test_shader.cpp.o: \
+ /home/jblairkiel/repos/terrain_gen_cpp/tests/test_shader.cpp \
  /usr/include/stdc-predef.h /usr/include/catch2/catch_test_macros.hpp \
  /usr/include/catch2/internal/catch_test_macro_impl.hpp \
  /usr/include/catch2/catch_user_config.hpp \
@@ -200,9 +200,12 @@ tests/CMakeFiles/camera_tests.dir/test_camera.cpp.o: \
  /usr/include/catch2/internal/catch_test_registry.hpp \
  /usr/include/catch2/interfaces/catch_interfaces_test_invoker.hpp \
  /usr/include/catch2/internal/catch_preprocessor_remove_parens.hpp \
- /usr/include/catch2/catch_approx.hpp /usr/include/glm/glm.hpp \
- /usr/include/glm/detail/_fixes.hpp /usr/include/c++/13/cmath \
- /usr/include/math.h /usr/include/aarch64-linux-gnu/bits/math-vector.h \
+ /home/jblairkiel/repos/terrain_gen_cpp/external/glad/include/glad/glad.h \
+ /usr/include/KHR/khrplatform.h /usr/include/GLFW/glfw3.h \
+ /home/jblairkiel/repos/terrain_gen_cpp/tests/../src/shaders/shader.h \
+ /usr/include/glm/glm.hpp /usr/include/glm/detail/_fixes.hpp \
+ /usr/include/c++/13/cmath /usr/include/math.h \
+ /usr/include/aarch64-linux-gnu/bits/math-vector.h \
  /usr/include/aarch64-linux-gnu/bits/libm-simd-decl-stubs.h \
  /usr/include/aarch64-linux-gnu/bits/flt-eval-method.h \
  /usr/include/aarch64-linux-gnu/bits/fp-logb.h \
@@ -344,20 +347,9 @@ tests/CMakeFiles/camera_tests.dir/test_camera.cpp.o: \
  /usr/include/glm/packing.hpp /usr/include/glm/detail/func_packing.inl \
  /usr/include/glm/detail/type_half.hpp \
  /usr/include/glm/detail/type_half.inl /usr/include/glm/integer.hpp \
- /usr/include/glm/detail/func_integer.inl \
- /usr/include/glm/gtc/matrix_transform.hpp \
- /usr/include/glm/ext/matrix_projection.hpp \
- /usr/include/glm/gtc/constants.hpp \
- /usr/include/glm/ext/scalar_constants.hpp \
- /usr/include/glm/ext/scalar_constants.inl \
- /usr/include/glm/gtc/constants.inl \
- /usr/include/glm/ext/matrix_projection.inl \
- /usr/include/glm/ext/matrix_clip_space.hpp \
- /usr/include/glm/ext/matrix_clip_space.inl \
- /usr/include/glm/ext/matrix_transform.hpp \
- /usr/include/glm/ext/matrix_transform.inl \
- /usr/include/glm/gtc/matrix_transform.inl \
- /home/jblairkiel/repos/terrain_gen_cpp/tests/../src/camera/thirdpersoncamera.h \
- /home/jblairkiel/repos/terrain_gen_cpp/tests/../src/camera/camera.h \
- /usr/include/GLFW/glfw3.h /usr/include/GL/gl.h /usr/include/GL/glext.h \
- /usr/include/KHR/khrplatform.h
+ /usr/include/glm/detail/func_integer.inl /usr/include/c++/13/fstream \
+ /usr/include/c++/13/istream /usr/include/c++/13/bits/istream.tcc \
+ /usr/include/c++/13/bits/codecvt.h \
+ /usr/include/aarch64-linux-gnu/c++/13/bits/basic_file.h \
+ /usr/include/aarch64-linux-gnu/c++/13/bits/c++io.h \
+ /usr/include/c++/13/bits/fstream.tcc

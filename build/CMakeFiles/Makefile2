@@ -167,7 +167,7 @@ src/terrain/clean: src/terrain/CMakeFiles/terrain_module.dir/clean
 # Directory level rules for directory tests
 
 # Recursive "all" directory target.
-tests/all: tests/CMakeFiles/camera_tests.dir/all
+tests/all: tests/CMakeFiles/tests.dir/all
 .PHONY : tests/all
 
 # Recursive "preinstall" directory target.
@@ -175,7 +175,7 @@ tests/preinstall:
 .PHONY : tests/preinstall
 
 # Recursive "clean" directory target.
-tests/clean: tests/CMakeFiles/camera_tests.dir/clean
+tests/clean: tests/CMakeFiles/tests.dir/clean
 .PHONY : tests/clean
 
 #=============================================================================
@@ -185,7 +185,7 @@ tests/clean: tests/CMakeFiles/camera_tests.dir/clean
 external/glad/CMakeFiles/glad.dir/all:
 	$(MAKE) $(MAKESILENT) -f external/glad/CMakeFiles/glad.dir/build.make external/glad/CMakeFiles/glad.dir/depend
 	$(MAKE) $(MAKESILENT) -f external/glad/CMakeFiles/glad.dir/build.make external/glad/CMakeFiles/glad.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/jblairkiel/repos/terrain_gen_cpp/build/CMakeFiles --progress-num=5,6 "Built target glad"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/jblairkiel/repos/terrain_gen_cpp/build/CMakeFiles --progress-num=3,4 "Built target glad"
 .PHONY : external/glad/CMakeFiles/glad.dir/all
 
 # Build rule for subdir invocation for target.
@@ -214,7 +214,7 @@ src/CMakeFiles/world.dir/all: src/terrain/CMakeFiles/terrain_module.dir/all
 src/CMakeFiles/world.dir/all: src/shaders/CMakeFiles/shader_module.dir/all
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/world.dir/build.make src/CMakeFiles/world.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/world.dir/build.make src/CMakeFiles/world.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/jblairkiel/repos/terrain_gen_cpp/build/CMakeFiles --progress-num=14,15,16 "Built target world"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/jblairkiel/repos/terrain_gen_cpp/build/CMakeFiles --progress-num=15,16,17 "Built target world"
 .PHONY : src/CMakeFiles/world.dir/all
 
 # Build rule for subdir invocation for target.
@@ -266,7 +266,7 @@ src/camera/CMakeFiles/camera_module.dir/clean:
 src/terrain/CMakeFiles/terrain_module.dir/all:
 	$(MAKE) $(MAKESILENT) -f src/terrain/CMakeFiles/terrain_module.dir/build.make src/terrain/CMakeFiles/terrain_module.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/terrain/CMakeFiles/terrain_module.dir/build.make src/terrain/CMakeFiles/terrain_module.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/jblairkiel/repos/terrain_gen_cpp/build/CMakeFiles --progress-num=9,10,11,12,13 "Built target terrain_module"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/jblairkiel/repos/terrain_gen_cpp/build/CMakeFiles --progress-num=7,8,9,10,11 "Built target terrain_module"
 .PHONY : src/terrain/CMakeFiles/terrain_module.dir/all
 
 # Build rule for subdir invocation for target.
@@ -292,7 +292,7 @@ src/terrain/CMakeFiles/terrain_module.dir/clean:
 src/shaders/CMakeFiles/shader_module.dir/all: external/glad/CMakeFiles/glad.dir/all
 	$(MAKE) $(MAKESILENT) -f src/shaders/CMakeFiles/shader_module.dir/build.make src/shaders/CMakeFiles/shader_module.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/shaders/CMakeFiles/shader_module.dir/build.make src/shaders/CMakeFiles/shader_module.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/jblairkiel/repos/terrain_gen_cpp/build/CMakeFiles --progress-num=7,8 "Built target shader_module"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/jblairkiel/repos/terrain_gen_cpp/build/CMakeFiles --progress-num=5,6 "Built target shader_module"
 .PHONY : src/shaders/CMakeFiles/shader_module.dir/all
 
 # Build rule for subdir invocation for target.
@@ -312,30 +312,33 @@ src/shaders/CMakeFiles/shader_module.dir/clean:
 .PHONY : src/shaders/CMakeFiles/shader_module.dir/clean
 
 #=============================================================================
-# Target rules for target tests/CMakeFiles/camera_tests.dir
+# Target rules for target tests/CMakeFiles/tests.dir
 
 # All Build rule for target.
-tests/CMakeFiles/camera_tests.dir/all:
-	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/camera_tests.dir/build.make tests/CMakeFiles/camera_tests.dir/depend
-	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/camera_tests.dir/build.make tests/CMakeFiles/camera_tests.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/jblairkiel/repos/terrain_gen_cpp/build/CMakeFiles --progress-num=3,4 "Built target camera_tests"
-.PHONY : tests/CMakeFiles/camera_tests.dir/all
+tests/CMakeFiles/tests.dir/all: external/glad/CMakeFiles/glad.dir/all
+tests/CMakeFiles/tests.dir/all: src/camera/CMakeFiles/camera_module.dir/all
+tests/CMakeFiles/tests.dir/all: src/terrain/CMakeFiles/terrain_module.dir/all
+tests/CMakeFiles/tests.dir/all: src/shaders/CMakeFiles/shader_module.dir/all
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/tests.dir/build.make tests/CMakeFiles/tests.dir/depend
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/tests.dir/build.make tests/CMakeFiles/tests.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/jblairkiel/repos/terrain_gen_cpp/build/CMakeFiles --progress-num=12,13,14 "Built target tests"
+.PHONY : tests/CMakeFiles/tests.dir/all
 
 # Build rule for subdir invocation for target.
-tests/CMakeFiles/camera_tests.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jblairkiel/repos/terrain_gen_cpp/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/camera_tests.dir/all
+tests/CMakeFiles/tests.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jblairkiel/repos/terrain_gen_cpp/build/CMakeFiles 14
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/tests.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/jblairkiel/repos/terrain_gen_cpp/build/CMakeFiles 0
-.PHONY : tests/CMakeFiles/camera_tests.dir/rule
+.PHONY : tests/CMakeFiles/tests.dir/rule
 
 # Convenience name for target.
-camera_tests: tests/CMakeFiles/camera_tests.dir/rule
-.PHONY : camera_tests
+tests: tests/CMakeFiles/tests.dir/rule
+.PHONY : tests
 
 # clean rule for target.
-tests/CMakeFiles/camera_tests.dir/clean:
-	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/camera_tests.dir/build.make tests/CMakeFiles/camera_tests.dir/clean
-.PHONY : tests/CMakeFiles/camera_tests.dir/clean
+tests/CMakeFiles/tests.dir/clean:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/tests.dir/build.make tests/CMakeFiles/tests.dir/clean
+.PHONY : tests/CMakeFiles/tests.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

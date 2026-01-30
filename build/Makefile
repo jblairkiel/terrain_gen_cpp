@@ -192,17 +192,17 @@ shader_module/fast:
 .PHONY : shader_module/fast
 
 #=============================================================================
-# Target rules for targets named camera_tests
+# Target rules for targets named tests
 
 # Build rule for target.
-camera_tests: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 camera_tests
-.PHONY : camera_tests
+tests: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests
+.PHONY : tests
 
 # fast build rule for target.
-camera_tests/fast:
-	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/camera_tests.dir/build.make tests/CMakeFiles/camera_tests.dir/build
-.PHONY : camera_tests/fast
+tests/fast:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/tests.dir/build.make tests/CMakeFiles/tests.dir/build
+.PHONY : tests/fast
 
 # Help Target
 help:
@@ -214,10 +214,10 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... test"
 	@echo "... camera_module"
-	@echo "... camera_tests"
 	@echo "... glad"
 	@echo "... shader_module"
 	@echo "... terrain_module"
+	@echo "... tests"
 	@echo "... world"
 .PHONY : help
 

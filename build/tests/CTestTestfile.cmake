@@ -4,4 +4,4 @@
 # 
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.
-include("/home/jblairkiel/repos/terrain_gen_cpp/build/tests/camera_tests_include-b12d07c.cmake")
+include("/home/jblairkiel/repos/terrain_gen_cpp/build/tests/tests_include-b12d07c.cmake")
