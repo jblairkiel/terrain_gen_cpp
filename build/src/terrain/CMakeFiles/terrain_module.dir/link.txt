@@ -1,0 +1,2 @@
+/usr/bin/ar qc libterrain_module.a CMakeFiles/terrain_module.dir/noise.cpp.o CMakeFiles/terrain_module.dir/heightsampler.cpp.o CMakeFiles/terrain_module.dir/terrainmeshbuilder.cpp.o CMakeFiles/terrain_module.dir/terrain.cpp.o
+/usr/bin/ranlib libterrain_module.a

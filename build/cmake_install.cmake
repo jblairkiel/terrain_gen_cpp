@@ -44,6 +44,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
+  include("/home/jblairkiel/repos/terrain_gen_cpp/build/external/glad/cmake_install.cmake")
   include("/home/jblairkiel/repos/terrain_gen_cpp/build/src/cmake_install.cmake")
   include("/home/jblairkiel/repos/terrain_gen_cpp/build/tests/cmake_install.cmake")
 

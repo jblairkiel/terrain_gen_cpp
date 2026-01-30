@@ -1,1 +1,1 @@
-/usr/bin/c++ CMakeFiles/world.dir/main.cpp.o CMakeFiles/world.dir/old_main.cpp.o -o world  /usr/lib/aarch64-linux-gnu/libglfw.so.3.3 libglad.a -ldl -lpthread -lX11 -lXrandr -lXi -lXxf86vm -lXcursor 
+/usr/bin/c++ CMakeFiles/world.dir/main.cpp.o CMakeFiles/world.dir/old_main.cpp.o -o world  camera/libcamera_module.a terrain/libterrain_module.a shaders/libshader_module.a ../external/glad/libglad.a /usr/lib/aarch64-linux-gnu/libglfw.so.3.3 -ldl -lpthread -lX11 -lXrandr -lXi -lXxf86vm -lXcursor 

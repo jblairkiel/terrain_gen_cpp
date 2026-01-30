@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/jblairkiel/repos/terrain_gen_cpp/src -I/home/jblairkiel/repos/terrain_gen_cpp/external/glad/include
+CXX_INCLUDES = -I/home/jblairkiel/repos/terrain_gen_cpp/src -I/home/jblairkiel/repos/terrain_gen_cpp/src/camera -I/home/jblairkiel/repos/terrain_gen_cpp/src/terrain -I/home/jblairkiel/repos/terrain_gen_cpp/src/shaders -I/home/jblairkiel/repos/terrain_gen_cpp/external/glad/include
 
 CXX_FLAGS = -std=gnu++17
 

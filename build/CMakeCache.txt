@@ -230,6 +230,9 @@ ProceduralWorld_SOURCE_DIR:STATIC=/home/jblairkiel/repos/terrain_gen_cpp
 //The directory containing a CMake configuration file for glfw3.
 glfw3_DIR:PATH=/usr/lib/aarch64-linux-gnu/cmake/glfw3
 
+//Dependencies for the target
+shader_module_LIB_DEPENDS:STATIC=general;glad;
+
 
 ########################
 # INTERNAL cache entries
@@ -335,7 +338,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=3
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=7
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

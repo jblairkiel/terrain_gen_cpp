@@ -108,8 +108,11 @@ world_EXTERNAL_OBJECTS =
 src/world: src/CMakeFiles/world.dir/main.cpp.o
 src/world: src/CMakeFiles/world.dir/old_main.cpp.o
 src/world: src/CMakeFiles/world.dir/build.make
+src/world: src/camera/libcamera_module.a
+src/world: src/terrain/libterrain_module.a
+src/world: src/shaders/libshader_module.a
+src/world: external/glad/libglad.a
 src/world: /usr/lib/aarch64-linux-gnu/libglfw.so.3.3
-src/world: src/libglad.a
 src/world: src/CMakeFiles/world.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/jblairkiel/repos/terrain_gen_cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable world"
 	cd /home/jblairkiel/repos/terrain_gen_cpp/build/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/world.dir/link.txt --verbose=$(VERBOSE)
